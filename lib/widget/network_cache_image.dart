@@ -34,7 +34,7 @@ class NetworkCacheImage extends ImageProvider<NetworkCacheImage> {
   }
 
   @override
-  ImageStreamCompleter load(NetworkCacheImage key) {
+  ImageStreamCompleter load(NetworkCacheImage key, DecoderCallback callback) {
     return MultiFrameImageStreamCompleter(
       codec: _loadAsync(key),
       scale: key.scale,
